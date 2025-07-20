@@ -8,7 +8,7 @@ module mkManchesterDecoder(FrameBitProcessor);
     FIFOF#(Maybe#(Bit#(1))) outFifo <- mkFIFOF;
 
     interface Put in;
-        method Action put(Maybe#(Bit#(1)) in_bit); // Renomeado 'in' para 'in_bit' para clareza
+        method Action put(Maybe#(Bit#(1)) in_bit);
             if(!isValid(in_bit))
             begin
                 i <= 0;
